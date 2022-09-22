@@ -1,0 +1,173 @@
+object Form2: TForm2
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 361
+  ClientWidth = 409
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Roboto'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label4: TLabel
+    AlignWithMargins = True
+    Left = 40
+    Top = 182
+    Width = 329
+    Height = 15
+    Margins.Left = 40
+    Margins.Top = 20
+    Margins.Right = 40
+    Align = alTop
+    Alignment = taCenter
+    Caption = 'Total de vendas no m'#234's (R$)'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Roboto'
+    Font.Style = []
+    ParentFont = False
+    ExplicitLeft = 35
+    ExplicitTop = 221
+  end
+  object lbTittle: TLabel
+    AlignWithMargins = True
+    Left = 3
+    Top = 20
+    Width = 403
+    Height = 19
+    Margins.Top = 20
+    Align = alTop
+    Alignment = taCenter
+    Caption = 'Calculadora de comiss'#227'o'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Roboto'
+    Font.Style = []
+    ParentFont = False
+    ExplicitWidth = 180
+  end
+  object lbResult: TLabel
+    AlignWithMargins = True
+    Left = 3
+    Top = 307
+    Width = 403
+    Height = 19
+    Margins.Top = 30
+    Align = alTop
+    Alignment = taCenter
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Roboto'
+    Font.Style = [fsBold]
+    ParentFont = False
+    ExplicitLeft = -2
+    ExplicitTop = 264
+  end
+  object Label2: TLabel
+    AlignWithMargins = True
+    Left = 3
+    Top = 117
+    Width = 403
+    Height = 15
+    Margins.Top = 10
+    Align = alTop
+    Alignment = taCenter
+    Caption = 'Sal'#225'rio fixo'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Roboto'
+    Font.Style = []
+    ParentFont = False
+    ExplicitWidth = 64
+  end
+  object Label3: TLabel
+    AlignWithMargins = True
+    Left = 3
+    Top = 62
+    Width = 403
+    Height = 15
+    Margins.Top = 20
+    Align = alTop
+    Alignment = taCenter
+    Caption = 'Nome do vendedor'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Roboto'
+    Font.Style = []
+    ParentFont = False
+    ExplicitWidth = 108
+  end
+  object edtNum1: TEdit
+    AlignWithMargins = True
+    Left = 40
+    Top = 83
+    Width = 329
+    Height = 21
+    Margins.Left = 40
+    Margins.Right = 40
+    Align = alTop
+    Alignment = taCenter
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 0
+    TextHint = 'Dist'#226'ncia total'
+  end
+  object edtNum2: TEdit
+    AlignWithMargins = True
+    Left = 40
+    Top = 138
+    Width = 329
+    Height = 21
+    Margins.Left = 40
+    Margins.Right = 40
+    Align = alTop
+    Alignment = taCenter
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 1
+    TextHint = 'Combust'#237'vel gasto'
+  end
+  object btnAction: TButton
+    AlignWithMargins = True
+    Left = 40
+    Top = 249
+    Width = 329
+    Height = 25
+    Margins.Left = 40
+    Margins.Top = 20
+    Margins.Right = 40
+    Align = alTop
+    Caption = 'Calcular'
+    TabOrder = 2
+    OnClick = btnActionClick
+    ExplicitLeft = 35
+    ExplicitTop = 203
+  end
+  object edtVendas: TEdit
+    AlignWithMargins = True
+    Left = 40
+    Top = 203
+    Width = 329
+    Height = 23
+    Margins.Left = 40
+    Margins.Right = 40
+    Align = alTop
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Roboto'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 3
+    ExplicitTop = 220
+  end
+end

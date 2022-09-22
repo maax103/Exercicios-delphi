@@ -1,0 +1,56 @@
+unit Unit2;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TForm2 = class(TForm)
+    edtNome: TEdit;
+    edtNota1: TEdit;
+    Label1: TLabel;
+    btnAction: TButton;
+    lbResult: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    edtNota2: TEdit;
+    Label5: TLabel;
+    edtNota3: TEdit;
+    procedure btnActionClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form2: TForm2;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm2.btnActionClick(Sender: TObject);
+var
+  xNome : String;
+  xNota1 : Double;
+  xNota2 : Double;
+  xNota3 : Double;
+  xResultado : Double;
+
+begin
+  xNome := edtNome.Text;
+  xNota1 := StrToFloatDef(edtNota1.Text, 0);
+  xNota2 := StrToFloatDef(edtNota2.Text, 0);
+  xNota3 := StrToFloatDef(edtNota3.Text, 0);
+
+  xResultado := (xNota1 + xNota2 + xNota3) / 3;
+
+  lbResult.Caption := Format('%s, sua média é %f)', [xNome ,xResultado]);
+end;
+
+end.

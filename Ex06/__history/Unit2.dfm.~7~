@@ -1,0 +1,139 @@
+object Form2: TForm2
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 361
+  ClientWidth = 409
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Roboto'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    AlignWithMargins = True
+    Left = 3
+    Top = 20
+    Width = 403
+    Height = 19
+    Margins.Top = 20
+    Align = alTop
+    Alignment = taCenter
+    Caption = 'Consumo m'#233'dio do autom'#243'vel'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Roboto'
+    Font.Style = []
+    ParentFont = False
+    ExplicitWidth = 217
+  end
+  object lbResult: TLabel
+    AlignWithMargins = True
+    Left = 3
+    Top = 240
+    Width = 403
+    Height = 19
+    Margins.Top = 30
+    Align = alTop
+    Alignment = taCenter
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Roboto'
+    Font.Style = [fsBold]
+    ParentFont = False
+    ExplicitTop = 198
+    ExplicitWidth = 4
+  end
+  object Label2: TLabel
+    AlignWithMargins = True
+    Left = 3
+    Top = 117
+    Width = 403
+    Height = 15
+    Margins.Top = 10
+    Align = alTop
+    Alignment = taCenter
+    Caption = 'Combust'#237'vel gasto (litros)'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Roboto'
+    Font.Style = []
+    ParentFont = False
+    ExplicitWidth = 146
+  end
+  object Label3: TLabel
+    AlignWithMargins = True
+    Left = 3
+    Top = 62
+    Width = 403
+    Height = 15
+    Margins.Top = 20
+    Align = alTop
+    Alignment = taCenter
+    Caption = 'Dist'#226'ncia total (km)'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Roboto'
+    Font.Style = []
+    ParentFont = False
+    ExplicitWidth = 111
+  end
+  object edtNum1: TEdit
+    AlignWithMargins = True
+    Left = 40
+    Top = 83
+    Width = 329
+    Height = 21
+    Margins.Left = 40
+    Margins.Right = 40
+    Align = alTop
+    Alignment = taCenter
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 0
+    TextHint = 'Dist'#226'ncia total'
+    ExplicitLeft = 35
+    ExplicitTop = 72
+    ExplicitWidth = 177
+  end
+  object edtNum2: TEdit
+    AlignWithMargins = True
+    Left = 40
+    Top = 138
+    Width = 329
+    Height = 21
+    Margins.Left = 40
+    Margins.Right = 40
+    Align = alTop
+    Alignment = taCenter
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 1
+    TextHint = 'Combust'#237'vel gasto'
+    ExplicitTop = 106
+    ExplicitWidth = 177
+  end
+  object btnAction: TButton
+    AlignWithMargins = True
+    Left = 40
+    Top = 182
+    Width = 329
+    Height = 25
+    Margins.Left = 40
+    Margins.Top = 20
+    Margins.Right = 40
+    Align = alTop
+    Caption = 'Calcular'
+    TabOrder = 2
+    OnClick = btnActionClick
+    ExplicitTop = 140
+    ExplicitWidth = 177
+  end
+end
