@@ -1,0 +1,51 @@
+unit Unit2;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls;
+
+type
+  TForm2 = class(TForm)
+    edtReais: TEdit;
+    lbTittle: TLabel;
+    btnAction: TButton;
+    lbResult: TLabel;
+    Label3: TLabel;
+    edtCotacao: TEdit;
+    Label1: TLabel;
+    procedure btnActionClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form2: TForm2;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm2.btnActionClick(Sender: TObject);
+var
+  xReais    : Double;
+  xCotacao  : Double;
+  xResult   : Double;
+
+begin
+  xReais := StrToFloatDef(edtReais.Text, 0);
+  xCotacao := StrToFloatDef(edtCotacao.Text, 0);
+
+  xResult := xReais * xCotacao;
+
+
+
+  lbResult.Caption := Format('R$ %f = %f US$',
+      [xReais, xResult]);
+end;
+
+end.

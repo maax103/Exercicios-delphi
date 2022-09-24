@@ -1,0 +1,13 @@
+﻿[lbTittle]
+Coordinates=73,10,53,58
+
+[Label3]
+Coordinates=10,146,53,58
+Visible=True
+
+[]
+Coordinates=136,10,44,58
+
+[edtNum]
+Coordinates=10,78,66,58
+

@@ -1,0 +1,142 @@
+object Form2: TForm2
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 335
+  ClientWidth = 409
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Roboto'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object lbTittle: TLabel
+    AlignWithMargins = True
+    Left = 3
+    Top = 20
+    Width = 403
+    Height = 19
+    Margins.Top = 20
+    Align = alTop
+    Alignment = taCenter
+    Caption = 'Conversor de moeda'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Roboto'
+    Font.Style = []
+    ParentFont = False
+    ExplicitWidth = 147
+  end
+  object lbResult: TLabel
+    AlignWithMargins = True
+    Left = 3
+    Top = 240
+    Width = 403
+    Height = 19
+    Margins.Top = 30
+    Align = alTop
+    Alignment = taCenter
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Roboto'
+    Font.Style = [fsBold]
+    ParentFont = False
+    ExplicitWidth = 4
+  end
+  object Label3: TLabel
+    AlignWithMargins = True
+    Left = 3
+    Top = 62
+    Width = 403
+    Height = 15
+    Margins.Top = 20
+    Align = alTop
+    Alignment = taCenter
+    Caption = 'Quantidade e reais'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Roboto'
+    Font.Style = []
+    ParentFont = False
+    ExplicitWidth = 107
+  end
+  object Label1: TLabel
+    AlignWithMargins = True
+    Left = 3
+    Top = 117
+    Width = 403
+    Height = 15
+    Margins.Top = 10
+    Align = alTop
+    Alignment = taCenter
+    Caption = 'Cota'#231#227'o do d'#243'lar hoje'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Roboto'
+    Font.Style = []
+    ParentFont = False
+    ExplicitWidth = 123
+  end
+  object edtReais: TEdit
+    AlignWithMargins = True
+    Left = 40
+    Top = 83
+    Width = 329
+    Height = 21
+    Margins.Left = 40
+    Margins.Right = 40
+    Align = alTop
+    Alignment = taCenter
+    ParentShowHint = False
+    ShowHint = False
+    TabOrder = 0
+  end
+  object btnAction: TButton
+    AlignWithMargins = True
+    Left = 40
+    Top = 182
+    Width = 329
+    Height = 25
+    Margins.Left = 40
+    Margins.Top = 20
+    Margins.Right = 40
+    Align = alTop
+    Caption = 'Calcular'
+    TabOrder = 1
+    OnClick = btnActionClick
+  end
+  object edtCotacao: TEdit
+    AlignWithMargins = True
+    Left = 40
+    Top = 138
+    Width = 329
+    Height = 21
+    Margins.Left = 40
+    Margins.Right = 40
+    Align = alTop
+    TabOrder = 2
+  end
+  object RESTClient1: TRESTClient
+    Params = <>
+    Left = 224
+    Top = 280
+  end
+  object RESTRequest1: TRESTRequest
+    Client = RESTClient1
+    Params = <>
+    Response = RESTResponse1
+    Left = 344
+    Top = 280
+  end
+  object RESTResponse1: TRESTResponse
+    Left = 280
+    Top = 280
+  end
+end

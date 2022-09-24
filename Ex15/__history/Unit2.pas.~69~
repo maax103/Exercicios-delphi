@@ -1,0 +1,57 @@
+unit Unit2;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls;
+
+type
+  TForm2 = class(TForm)
+    edtNumA: TEdit;
+    lbTittle: TLabel;
+    Label3: TLabel;
+    Label2: TLabel;
+    edtNumB: TEdit;
+    pnlResult: TPanel;
+    procedure edtNumAChange(Sender: TObject);
+    procedure edtNumBChange(Sender: TObject);
+  private
+    procedure compareNumbers;
+  public
+    { Public declarations }
+  end;
+
+var
+  Form2: TForm2;
+
+implementation
+
+uses Math;
+
+{$R *.dfm}
+
+
+procedure TForm2.compareNumbers;
+var
+  xNumA : Integer;
+  xNumB : Integer;
+begin
+  pnlResult.Visible := True;
+  if xNumA = xNumB then pnlResult.Caption := 'Os números são iguais'
+  else if xNumA > xNumB then pnlResult.Caption := 'A é maior que B'
+  else pnlResult.Caption := 'B é maior que A';
+end;
+
+procedure TForm2.edtNumAChange(Sender: TObject);
+begin
+  compareNumbers;
+end;
+
+procedure TForm2.edtNumBChange(Sender: TObject);
+begin
+  compareNumbers;
+end;
+
+end.

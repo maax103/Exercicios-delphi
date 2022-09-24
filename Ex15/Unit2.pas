@@ -1,0 +1,50 @@
+unit Unit2;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls;
+
+type
+  TForm2 = class(TForm)
+    edtNum: TEdit;
+    lbTittle: TLabel;
+    Label3: TLabel;
+    pnlResult: TPanel;
+    procedure edtNumChange(Sender: TObject);
+  private
+    procedure compareNumbers;
+  public
+    { Public declarations }
+  end;
+
+var
+  Form2: TForm2;
+
+implementation
+
+uses Math;
+
+{$R *.dfm}
+
+
+procedure TForm2.compareNumbers;
+var
+  xNum : Integer;
+  xNumB : Integer;
+begin
+  pnlResult.Visible := True;
+  xNum := StrToIntDef(edtNum.Text, 0);
+
+  if (xNum >= 100) and (xNum <= 200) then pnlResult.Caption := 'O número está no intervalo [100, 200]'
+  else pnlResult.Caption := 'O número não está no intervalo [100, 200]';
+end;
+
+procedure TForm2.edtNumChange(Sender: TObject);
+begin
+  compareNumbers;
+end;
+
+end.

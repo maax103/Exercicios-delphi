@@ -1,0 +1,127 @@
+object Form2: TForm2
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 337
+  ClientWidth = 409
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Roboto'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object lbTittle: TLabel
+    AlignWithMargins = True
+    Left = 3
+    Top = 20
+    Width = 403
+    Height = 19
+    Margins.Top = 20
+    Align = alTop
+    Alignment = taCenter
+    Caption = 'Pre'#231'o de venda'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Roboto'
+    Font.Style = []
+    ParentFont = False
+    ExplicitWidth = 109
+  end
+  object lbResult: TLabel
+    AlignWithMargins = True
+    Left = 3
+    Top = 240
+    Width = 403
+    Height = 19
+    Margins.Top = 30
+    Align = alTop
+    Alignment = taCenter
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Roboto'
+    Font.Style = [fsBold]
+    ParentFont = False
+    ExplicitWidth = 4
+  end
+  object Label3: TLabel
+    AlignWithMargins = True
+    Left = 3
+    Top = 62
+    Width = 403
+    Height = 15
+    Margins.Top = 20
+    Align = alTop
+    Alignment = taCenter
+    Caption = 'Custo do produto'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Roboto'
+    Font.Style = []
+    ParentFont = False
+    ExplicitWidth = 97
+  end
+  object Label1: TLabel
+    AlignWithMargins = True
+    Left = 3
+    Top = 117
+    Width = 403
+    Height = 15
+    Margins.Top = 10
+    Align = alTop
+    Alignment = taCenter
+    Caption = 'Lucro desejado (%)'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Roboto'
+    Font.Style = []
+    ParentFont = False
+    ExplicitWidth = 109
+  end
+  object btnAction: TButton
+    AlignWithMargins = True
+    Left = 40
+    Top = 182
+    Width = 329
+    Height = 25
+    Margins.Left = 40
+    Margins.Top = 20
+    Margins.Right = 40
+    Align = alTop
+    Caption = 'Calcular'
+    TabOrder = 2
+    OnClick = btnActionClick
+  end
+  object edtCusto: TEdit
+    AlignWithMargins = True
+    Left = 40
+    Top = 83
+    Width = 329
+    Height = 21
+    Margins.Left = 40
+    Margins.Right = 40
+    Align = alTop
+    Alignment = taCenter
+    ParentShowHint = False
+    ShowHint = False
+    TabOrder = 0
+  end
+  object edtLucro: TEdit
+    AlignWithMargins = True
+    Left = 40
+    Top = 138
+    Width = 329
+    Height = 21
+    Margins.Left = 40
+    Margins.Right = 40
+    Align = alTop
+    Alignment = taCenter
+    TabOrder = 1
+  end
+end
