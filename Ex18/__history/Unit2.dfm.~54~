@@ -1,0 +1,111 @@
+object Form2: TForm2
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 667
+  ClientWidth = 417
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Roboto'
+  Font.Style = []
+  OldCreateOrder = False
+  DesignSize = (
+    417
+    667)
+  PixelsPerInch = 96
+  TextHeight = 13
+  object lbTittle: TLabel
+    AlignWithMargins = True
+    Left = 3
+    Top = 20
+    Width = 411
+    Height = 23
+    Margins.Top = 20
+    Align = alTop
+    Alignment = taCenter
+    Caption = 'Listando maiores de idade'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Roboto'
+    Font.Style = []
+    ParentFont = False
+    ExplicitWidth = 227
+  end
+  object pnlResult: TPanel
+    Left = 6
+    Top = 67
+    Width = 403
+    Height = 592
+    Anchors = [akLeft, akRight, akBottom]
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -15
+    Font.Name = 'Roboto'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 0
+    ExplicitTop = 72
+    object lbQtd: TLabel
+      AlignWithMargins = True
+      Left = 4
+      Top = 11
+      Width = 395
+      Height = 18
+      Margins.Top = 10
+      Align = alTop
+      Alignment = taCenter
+      Caption = 'Digite o tamanho da lista'
+      ExplicitWidth = 172
+    end
+    object edtQtdAlunos: TEdit
+      Left = 8
+      Top = 37
+      Width = 385
+      Height = 26
+      Alignment = taCenter
+      TabOrder = 0
+    end
+    object btnCalculate: TButton
+      AlignWithMargins = True
+      Left = 51
+      Top = 92
+      Width = 301
+      Height = 49
+      Margins.Left = 50
+      Margins.Top = 60
+      Margins.Right = 50
+      Align = alTop
+      BiDiMode = bdLeftToRight
+      Caption = 'Calcular'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -15
+      Font.Name = 'Roboto'
+      Font.Style = []
+      ParentBiDiMode = False
+      ParentFont = False
+      TabOrder = 1
+      OnClick = btnCalculateClick
+      ExplicitLeft = 136
+      ExplicitTop = 103
+      ExplicitWidth = 129
+    end
+    object memResult: TMemo
+      AlignWithMargins = True
+      Left = 11
+      Top = 194
+      Width = 381
+      Height = 383
+      Margins.Left = 10
+      Margins.Top = 50
+      Margins.Right = 10
+      Align = alTop
+      Alignment = taCenter
+      TabOrder = 2
+      Visible = False
+    end
+  end
+end

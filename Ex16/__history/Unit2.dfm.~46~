@@ -1,0 +1,132 @@
+object Form2: TForm2
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 373
+  ClientWidth = 417
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Roboto'
+  Font.Style = []
+  OldCreateOrder = False
+  DesignSize = (
+    417
+    373)
+  PixelsPerInch = 96
+  TextHeight = 13
+  object lbTittle: TLabel
+    AlignWithMargins = True
+    Left = 3
+    Top = 20
+    Width = 411
+    Height = 19
+    Margins.Top = 20
+    Align = alTop
+    Alignment = taCenter
+    Caption = 'Avaliador de aluno'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Roboto'
+    Font.Style = []
+    ParentFont = False
+    ExplicitLeft = 8
+    ExplicitTop = 12
+  end
+  object pnlResult: TPanel
+    Left = 6
+    Top = 64
+    Width = 403
+    Height = 301
+    Anchors = [akLeft, akRight, akBottom]
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -15
+    Font.Name = 'Roboto'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 0
+    Visible = False
+    object lbNome: TLabel
+      Left = 8
+      Top = 8
+      Width = 385
+      Height = 18
+      Alignment = taCenter
+      Caption = 'Digite seu nome'
+    end
+    object Nota1: TLabel
+      Left = 48
+      Top = 104
+      Width = 57
+      Height = 18
+      Alignment = taCenter
+      Caption = 'Nota 1'
+    end
+    object Nota2: TLabel
+      Left = 168
+      Top = 104
+      Width = 57
+      Height = 18
+      Alignment = taCenter
+      Caption = 'Nota 2'
+    end
+    object Nota3: TLabel
+      Left = 288
+      Top = 104
+      Width = 57
+      Height = 18
+      Alignment = taCenter
+      Caption = 'Nota 3'
+    end
+    object edtName: TEdit
+      Left = 8
+      Top = 37
+      Width = 385
+      Height = 26
+      Alignment = taCenter
+      TabOrder = 0
+    end
+    object btnCalculate: TButton
+      Left = 136
+      Top = 192
+      Width = 129
+      Height = 49
+      Caption = 'Calcular'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -15
+      Font.Name = 'Roboto'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 1
+      OnClick = btnCalculateClick
+    end
+    object edtNota1: TEdit
+      Left = 48
+      Top = 128
+      Width = 57
+      Height = 26
+      Alignment = taCenter
+      TabOrder = 2
+    end
+    object edtNota2: TEdit
+      Left = 168
+      Top = 128
+      Width = 57
+      Height = 26
+      Alignment = taCenter
+      TabOrder = 3
+    end
+    object edtNota3: TEdit
+      Left = 288
+      Top = 128
+      Width = 57
+      Height = 26
+      Alignment = taCenter
+      TabOrder = 4
+    end
+  end
+end

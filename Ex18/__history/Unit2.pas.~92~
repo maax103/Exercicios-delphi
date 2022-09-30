@@ -1,0 +1,72 @@
+unit Unit2;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls;
+
+type
+  TForm2 = class(TForm)
+    lbTittle: TLabel;
+    pnlResult: TPanel;
+    lbQtd: TLabel;
+    edtQtdAlunos: TEdit;
+    btnCalculate: TButton;
+    lbResult: TLabel;
+    procedure btnCalculateClick(Sender: TObject);
+  private
+  public
+    { Public declarations }
+  end;
+
+var
+  Form2: TForm2;
+
+implementation
+
+{$R *.dfm}
+
+
+procedure TForm2.btnCalculateClick(Sender: TObject);
+var
+  xQtdAlunos, I : Integer;
+  xNome : array of String;
+  xNotas : array of Integer;
+begin
+
+  xQtdAlunos := StrToInt(edtQtdAlunos.Text);
+
+  for I := 0 to xQtdAlunos - 1 do
+  begin
+    SetLength(xNome, I + 1);
+    SetLength(xNotas, I + 1);
+    xNome[I] := inputbox('Informar nome','nome: ','');
+    xNome[I] := inputbox('Informar nome','nome: ','');
+
+  end;
+
+  xNota1 := StrToFloatDef(inputbox('Informar','Primeira nota',''),0);
+  xNota2 := StrToFloatDef(inputbox('Informar','Segunda nota',''),0);
+  xNota3 := StrToFloatDef(inputbox('Informar','Terceira nota',''),0);
+
+  xMedia := (xNota1 + xNota2 + xNota3) / 3;
+
+  if xMedia >= 7 then
+  begin
+    lbResult.Caption := Format('%s foi provado com nota %f!',[xNome,xMedia])
+  end
+  else if xMedia <= 5 then
+  begin
+    lbResult.Caption := Format('%s foi reprovado com nota %f.',[xNome, xMedia])
+  end
+  else
+  begin
+    lbResult.Caption := Format('%s está em recuperação com nota %f.',[xNome, xMedia])
+  end;
+
+
+end;
+
+end.

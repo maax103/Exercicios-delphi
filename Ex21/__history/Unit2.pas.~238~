@@ -1,0 +1,100 @@
+unit Unit2;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls;
+
+type
+  TPessoa = Record
+    nome: String;
+    sexo: String;
+    idade: Integer;
+    BoaSaude: Boolean;
+  End;
+
+  TCarros = array of String;
+  TAnos = array of Integer;
+
+  TForm2 = class(TForm)
+    lbTittle: TLabel;
+    pnlContainer: TPanel;
+    memResult: TMemo;
+    btnCalculate: TButton;
+    procedure btnCalculateClick(Sender: TObject);
+  private
+    Pessoas: array of TPessoa;
+    procedure cadastrarPessoa;
+    procedure escreverResposta;
+  public
+    { Public declarations }
+  end;
+
+var
+  Form2: TForm2;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm2.cadastrarPessoa();
+begin
+  SetLength(Pessoas, Length(Pessoas) + 1);
+  Pessoas[Length(Pessoas) - 1].nome := InputBox('Informar nome','Nome','');
+  Pessoas[Length(Pessoas) - 1].sexo := InputBox('Informar nome','Sexo','M');;
+  Pessoas[Length(Pessoas) - 1].idade := StrToInt(InputBox('Informar idade','Idade',''));
+  Pessoas[Length(Pessoas) - 1].BoaSaude := True;
+end;
+
+procedure TForm2.escreverResposta;
+var
+  xNome: String;
+  xIdade: Integer;
+  xSexo: String;
+  xBoaSaude: Boolean;
+  I : Integer;
+begin
+  memResult.Clear;
+  I := 0;
+
+  for I := 0 to Length(Pessoas) - 1 do
+  begin
+    xNome := Pessoas[I].nome;
+    xIdade := Pessoas[I].idade;
+    xSexo := Pessoas[I].sexo;
+    xBoaSaude := Pessoas[I].BoaSaude;
+
+    memResult.Lines.Add(Format('%s está apto!',
+    [
+    xNome
+    ]))
+  end;
+
+end;
+
+procedure TForm2.btnCalculateClick(Sender: TObject);
+var
+  xQtdPessoas: Integer;
+  I: Integer;
+
+begin
+
+  memResult.Clear;
+
+  xQtdPessoas := StrToIntDef(InputBox('Informar quantidade',
+    'Quantidade de pessoas', ''), 1);
+
+  SetLength(Pessoas, 0);
+  for I := 0 to xQtdPessoas - 1 do
+  begin
+    cadastrarPessoa;
+  end;
+
+  escreverResposta;
+  memResult.Visible := True;
+
+end;
+
+end.

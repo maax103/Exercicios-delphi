@@ -1,0 +1,53 @@
+unit Unit2;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls;
+
+type
+  TForm2 = class(TForm)
+    lbTittle: TLabel;
+    pnlResult: TPanel;
+    lbNome: TLabel;
+    edtName: TEdit;
+    btnCalculate: TButton;
+    Label1: TLabel;
+    procedure edtNumChange(Sender: TObject);
+    procedure btnCalculateClick(Sender: TObject);
+  private
+    procedure compareNumbers;
+  public
+    { Public declarations }
+  end;
+
+var
+  Form2: TForm2;
+
+implementation
+
+uses Math;
+
+{$R *.dfm}
+
+
+procedure TForm2.btnCalculateClick(Sender: TObject);
+var
+  xNota1, xNota2, xNota3 : Double;
+begin
+  var xNome := inputbox('Informar','Seu nome','');
+end;
+
+procedure TForm2.compareNumbers;
+begin
+
+end;
+
+procedure TForm2.edtNumChange(Sender: TObject);
+begin
+  compareNumbers;
+end;
+
+end.

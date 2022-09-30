@@ -1,0 +1,130 @@
+unit Unit2;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls;
+
+type
+  TNumeros = array of Double;
+
+  TForm2 = class(TForm)
+    lbTittle: TLabel;
+    pnlContainer: TPanel;
+    memResult: TMemo;
+    btnStart: TButton;
+    procedure btnStartClick(Sender: TObject);
+  private
+    procedure solicitarNumero;
+    procedure escreverResposta;
+  public
+    { Public declarations }
+  end;
+
+var
+  Form2: TForm2;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm2.solicitarNumero();
+begin
+  SetLength(Produtos, Length(Produtos) + 1);
+  Produtos[Length(Produtos) - 1].PrecoCusto :=
+    StrToCurr(InputBox('Informar custo', 'Preço de custo', ''));
+  Produtos[Length(Produtos) - 1].PrecoVenda :=
+    StrToCurr(InputBox('Informar venda', 'Preço de venda', ''));
+
+  Produtos[Length(Produtos) - 1].Lucro := Produtos[Length(Produtos) - 1]
+    .PrecoVenda - Produtos[Length(Produtos) - 1].PrecoCusto;
+end;
+
+procedure calcularMedias(
+  aProdutos : TProdutos;
+  var aMediaPrecoCusto : Currency;
+  var aMediaPrecoVenda : Currency;
+  var aLucro : Currency;
+  var aLucroMedio : Currency);
+
+var
+  I : Integer;
+  xSomaVenda : Currency;
+  xSomaCusto : Currency;
+begin
+  xSomaVenda := 0;
+  xSomaCusto := 0;
+  aLucro := 0;
+  for I := 0 to Length(aProdutos) - 1 do
+  begin
+    xSomaVenda := xSomaVenda + aProdutos[I].PrecoVenda;
+    xSomaCusto := xSomaCusto + aProdutos[I].PrecoCusto;
+
+    aLucro := aLucro + (aProdutos[I].PrecoVenda - aProdutos[I].PrecoCusto);
+  end;
+  aMediaPrecoCusto := xSomaCusto / Length(aProdutos);
+  aMediaPrecoVenda := xSomaVenda / Length(aProdutos);
+  aLucroMedio := aLucro / Length(aProdutos);
+end;
+
+procedure TForm2.escreverResposta;
+var
+  xPrecoVenda, xPrecoCusto, xLucro, xLucroMedio
+  , xMediaPrecoCusto, xMediaPrecoVenda: Currency;
+  I: Integer;
+  xIsValid: Boolean;
+  xCountValid: Integer;
+begin
+  memResult.Clear;
+  I := 0;
+  xCountValid := 0;
+
+  for I := 0 to Length(Produtos) - 1 do
+  begin
+    xPrecoVenda := Produtos[I].PrecoVenda;
+    xPrecoCusto := Produtos[I].PrecoCusto;
+    xLucro := Produtos[I].Lucro;
+
+    memResult.Lines.Add(Format('Produto: %d | Venda: %f | Custo: %f | Lucro: %f ', [I + 1,xPrecoVenda, xPrecoCusto, xLucro]));
+
+  end;
+
+  calcularMedias(Produtos, xMediaPrecoCusto, xMediaPrecoVenda, xLucro, xLucroMedio);
+
+  memResult.Lines.Add(
+      sLineBreak +
+      Format(sLineBreak + 'Preço médio de venda: %f',
+      [xMediaPrecoVenda]) + sLineBreak +
+      Format('Preço médio de custo: %f',
+      [xMediaPrecoCusto]) + sLineBreak +
+      Format('Lucro total: %f',[xLucro]) + sLineBreak +
+      Format('Lucro médio: %f',[xLucroMedio])
+    );
+
+  memResult.Visible := True;
+end;
+
+procedure TForm2.btnStartClick(Sender: TObject);
+var
+  xQtdPessoas: Integer;
+  I: Integer;
+  xContinue: Boolean;
+
+begin
+
+  memResult.Clear;
+  xContinue := True;
+  repeat
+    solicitarNumero;
+    escreverResposta;
+    if MessageDlg('Deseja informar outro número?', mtCustom,
+      [mbYes, mbNo], mrNo) = mrNo
+    then
+      xContinue := False
+  until xContinue = False;
+
+  end;
+
+end.

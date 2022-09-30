@@ -1,0 +1,60 @@
+unit Unit2;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls;
+
+type
+  TForm2 = class(TForm)
+    lbTittle: TLabel;
+    pnlResult: TPanel;
+    lbNome: TLabel;
+    edtName: TEdit;
+    btnCalculate: TButton;
+    lbResult: TLabel;
+    procedure btnCalculateClick(Sender: TObject);
+  private
+  public
+    { Public declarations }
+  end;
+
+var
+  Form2: TForm2;
+
+implementation
+
+uses Math;
+
+{$R *.dfm}
+
+
+procedure TForm2.btnCalculateClick(Sender: TObject);
+var
+  xNota1, xNota2, xNota3, xMedia : Double;
+begin
+  xNota1 := StrToFloatDef(inputbox('Informar','Primeira nota',''),0);
+  xNota2 := StrToFloatDef(inputbox('Informar','Segunda nota',''),0);
+  xNota3 := StrToFloatDef(inputbox('Informar','Terceira nota',''),0);
+
+  xMedia := (xNota1 + xNota2 + xNota3) / 3;
+
+  if xMedia >= 7 then
+  begin
+    lbResult.Caption := 'Aprovado!'
+  end
+  else if xMedia <= 5 then
+  begin
+    lbResult.Caption := 'Reprovado.'
+  end
+  else
+  begin
+    lbResult.Caption := 'Em recuperação...'
+  end;
+
+
+end;
+
+end.
