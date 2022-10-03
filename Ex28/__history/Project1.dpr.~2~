@@ -1,0 +1,16 @@
+program Project1;
+
+uses
+  Vcl.Forms,
+  Unit2 in 'Unit2.pas' {Exercicios},
+  Unit1 in 'Unit1.pas' {Unit28};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TExercicios, Exercicios);
+  Application.CreateForm(TUnit28, Unit28);
+  Application.Run;
+end.

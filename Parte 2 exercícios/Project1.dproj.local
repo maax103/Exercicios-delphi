@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/09/12 20:47:44.000.693,=C:\Users\mmfurtado\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022/09/21 20:12:01.000.895,=C:\Users\mmfurtado\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022/09/30 19:06:30.514,=C:\Users\mmfurtado\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022/09/30 19:07:39.518,=C:\Users\mmfurtado\Documents\Embarcadero\Studio\Projects\Unit3.pas</Transaction>
+    <Transaction>2022/09/30 19:07:52.517,=C:\Users\mmfurtado\Documents\Embarcadero\Studio\Projects\Unit3.pas</Transaction>
+    <Transaction>2022/09/30 19:08:01.293,=C:\Users\mmfurtado\Documents\Embarcadero\Studio\Projects\Unit4.pas</Transaction>
+    <Transaction>2022/09/30 19:08:06.301,=C:\Users\mmfurtado\Documents\Embarcadero\Studio\Projects\Unit5.pas</Transaction>
+    <Transaction>2022/09/30 19:11:35.715,C:\Users\mmfurtado\Desktop\Max\Parte 2 exercícios\Unit2.dfm=C:\Users\mmfurtado\Documents\Embarcadero\Studio\Projects\Unit2.dfm</Transaction>
+    <Transaction>2022/09/30 19:11:35.715,C:\Users\mmfurtado\Desktop\Max\Parte 2 exercícios\Unit2.pas=C:\Users\mmfurtado\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022/09/30 19:13:42.072,C:\Users\mmfurtado\Desktop\Max\Parte 2 exercícios\UfrmFornecedores.dfm=C:\Users\mmfurtado\Documents\Embarcadero\Studio\Projects\Unit4.dfm</Transaction>
+    <Transaction>2022/09/30 19:13:42.072,C:\Users\mmfurtado\Desktop\Max\Parte 2 exercícios\UfrmFornecedores.pas=C:\Users\mmfurtado\Documents\Embarcadero\Studio\Projects\Unit4.pas</Transaction>
+    <Transaction>2022/09/30 19:14:01.840,C:\Users\mmfurtado\Desktop\Max\Parte 2 exercícios\UfrmProdutos.pas=C:\Users\mmfurtado\Documents\Embarcadero\Studio\Projects\Unit3.pas</Transaction>
+    <Transaction>2022/09/30 19:14:01.840,C:\Users\mmfurtado\Desktop\Max\Parte 2 exercícios\UfrmProdutos.dfm=C:\Users\mmfurtado\Documents\Embarcadero\Studio\Projects\Unit3.dfm</Transaction>
+    <Transaction>2022/09/30 19:14:33.680,C:\Users\mmfurtado\Desktop\Max\Parte 2 exercícios\UfrmClientes.pas=C:\Users\mmfurtado\Documents\Embarcadero\Studio\Projects\Unit5.pas</Transaction>
+    <Transaction>2022/09/30 19:14:33.680,C:\Users\mmfurtado\Desktop\Max\Parte 2 exercícios\UfrmClientes.dfm=C:\Users\mmfurtado\Documents\Embarcadero\Studio\Projects\Unit5.dfm</Transaction>
+    <Transaction>2022/09/30 19:25:27.088,C:\Users\mmfurtado\Desktop\Max\Parte 2 exercícios\Project1.dproj=C:\Users\mmfurtado\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+  </Transactions>
+</BorlandProject>

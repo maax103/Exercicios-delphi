@@ -1,0 +1,88 @@
+unit UFrmExercicios;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.Menus;
+
+type
+  TPrecos = (nAlcool, nGasolina, nDiesel);
+  TExercicios = class(TForm)
+    MainMenu1: TMainMenu;
+    Exerccio281: TMenuItem;
+    Exerccio282: TMenuItem;
+    Exerccio301: TMenuItem;
+    procedure btnStartClick(Sender: TObject);
+  private
+    procedure calcularVenda;
+    procedure iniciarVenda(
+       var aPreco : Currency;
+       var aDesconto : Double;
+       var aType : Integer);
+    procedure escreverResposta;
+    procedure vender;
+  public
+    { Public declarations }
+  end;
+
+var
+  Exercicios: TExercicios;
+
+implementation
+
+{$R *.dfm}
+
+procedure TExercicios.calcularVenda;
+var
+  xPreco : Currency;
+  xDesconto : Double;
+  xType : Integer;
+begin
+  iniciarVenda();
+  escreverResposta();
+end;
+
+function calcularPercentDesconto(var aType : Integer) : Double;
+begin
+  Result := 0;
+  case TPrecos(aType) of
+    nAlcool     : Result:= 0.25;
+    nGasolina   : Result:= 0.21;
+    nDiesel     : Result:= 0.14;
+  end;
+end;
+
+procedure TExercicios.iniciarVenda(
+  var aPreco : Currency;
+  var aDesconto : Double;
+  var aType : Integer);
+begin
+  aType := rdgTypes.ItemIndex;
+  aDesconto := calcularPercentDesconto(xType);
+  aPreco := StrToCurrDef(InputBox('Informar o preço do veículo',
+    'R$', ''), 0);
+end;
+
+procedure TExercicios.escreverResposta;
+begin
+  var xResult := '';
+  case TNumeros(FNumero - 1) of
+    nUm : xResult := 'Um';
+    nDois : xResult := 'Dois';
+    nTres : xResult := 'Tres';
+    nQuatro : xResult := 'Quatro';
+    nCinco : xResult := 'Cinco';
+  end;
+  lbResult.Caption := xResult;
+end;
+
+
+
+procedure TExercicios.btnStartClick(Sender: TObject);
+begin
+  calcularVenda;
+end;
+
+end.
