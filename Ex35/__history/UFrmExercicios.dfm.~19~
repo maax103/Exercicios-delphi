@@ -2,8 +2,8 @@ object Exercicios: TExercicios
   Left = 0
   Top = 0
   Caption = 'Exercicios'
-  ClientHeight = 500
-  ClientWidth = 500
+  ClientHeight = 350
+  ClientWidth = 679
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -20,7 +20,7 @@ object Exercicios: TExercicios
     AlignWithMargins = True
     Left = 60
     Top = 10
-    Width = 380
+    Width = 559
     Height = 19
     Margins.Left = 60
     Margins.Top = 10
@@ -36,19 +36,19 @@ object Exercicios: TExercicios
     ParentFont = False
     ExplicitLeft = 65
     ExplicitTop = 0
-    ExplicitWidth = 559
   end
   object memResult: TMemo
     AlignWithMargins = True
     Left = 50
     Top = 42
-    Width = 400
-    Height = 455
+    Width = 579
+    Height = 279
     Margins.Left = 50
     Margins.Top = 10
     Margins.Right = 50
     Align = alTop
     TabOrder = 0
+    ExplicitTop = 82
   end
   object MainMenu1: TMainMenu
     Left = 16

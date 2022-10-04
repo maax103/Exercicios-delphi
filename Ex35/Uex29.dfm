@@ -10,7 +10,6 @@ object frmEx29: TfrmEx29
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  FormStyle = fsMDIChild
   OldCreateOrder = False
   Visible = True
   PixelsPerInch = 96

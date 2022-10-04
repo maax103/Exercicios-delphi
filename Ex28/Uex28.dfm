@@ -62,9 +62,6 @@ object frmEx28: TfrmEx28
     Caption = 'Calcular'
     TabOrder = 1
     OnClick = btnCalculateClick
-    ExplicitLeft = 176
-    ExplicitTop = 168
-    ExplicitWidth = 99
   end
   object memResult: TMemo
     AlignWithMargins = True

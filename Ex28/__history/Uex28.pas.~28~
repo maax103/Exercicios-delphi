@@ -13,14 +13,15 @@ type
     salario : Currency;
   end;
   TfrmEx28 = class(TForm)
-    edtConsumo: TEdit;
+    edtQtdFunc: TEdit;
     lbTittle: TLabel;
     btnCalculate: TButton;
+    memResult: TMemo;
     procedure btnCalculateClick(Sender: TObject);
   private
     FFuncionarios : array of TFuncionario;
     procedure cadastrarFuncionarios(const aQtdFuncionarios : Integer);
-    procedure escreverResposta(aResult : Currency);
+    procedure escreverResposta;
     procedure calcularNovoSalario;
     { Private declarations }
   public
@@ -32,25 +33,16 @@ var
 
 implementation
 
-uses
-  UFrmExercicios;
-
 {$R *.dfm}
-
-function calcularConsumo(aConsumo : Double) : Currency;
-begin
-  Result := aConsumo * 0.6;
-end;
 
 procedure TfrmEx28.btnCalculateClick(Sender: TObject);
 var
-  xConsumoKWh : Double;
-  xValorDaConta : Currency;
+  xQtdFuncionarios : Integer;
 begin
-  xConsumoKWh := StrToFloatDef(edtConsumo.Text, 1);
-  xValorDaConta := calcularConsumo(xConsumoKWh);
-  escreverResposta(xValorDaConta);
-
+  SetLength(FFuncionarios, 0);
+  xQtdFuncionarios := StrToIntDef(edtQtdFunc.Text, 1);
+  cadastrarFuncionarios(xQtdFuncionarios);
+  escreverResposta;
 end;
 
 procedure TfrmEx28.cadastrarFuncionarios(const aQtdFuncionarios : Integer);
@@ -104,6 +96,12 @@ procedure TfrmEx28.escreverResposta;
 var
   I : Integer;
 begin
+  memResult.Clear;
+
+  for I := 0 to Length(FFuncionarios) - 1 do
+  begin
+    memResult.Lines.Add(Format('Nome',[]));
+  end;
 
 
 end;

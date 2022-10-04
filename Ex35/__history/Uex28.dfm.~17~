@@ -1,8 +1,10 @@
 object frmEx28: TfrmEx28
+  AlignWithMargins = True
   Left = 0
   Top = 0
+  Align = alLeft
   Caption = 'Exerc'#237'cio 28'
-  ClientHeight = 208
+  ClientHeight = 339
   ClientWidth = 480
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -13,7 +15,6 @@ object frmEx28: TfrmEx28
   FormStyle = fsMDIChild
   OldCreateOrder = False
   Visible = True
-  WindowState = wsMaximized
   PixelsPerInch = 96
   TextHeight = 16
   object lbTittle: TLabel
@@ -34,7 +35,7 @@ object frmEx28: TfrmEx28
     ParentFont = False
     ExplicitWidth = 263
   end
-  object edtQtdFunc: TEdit
+  object edtConsumo: TEdit
     AlignWithMargins = True
     Left = 60
     Top = 97
@@ -49,6 +50,8 @@ object frmEx28: TfrmEx28
     ShowHint = True
     TabOrder = 0
     TextHint = 'Insira o valor de KW/h consumido'
+    ExplicitLeft = 65
+    ExplicitTop = 289
   end
   object btnCalculate: TButton
     AlignWithMargins = True
@@ -63,5 +66,20 @@ object frmEx28: TfrmEx28
     Caption = 'Calcular'
     TabOrder = 1
     OnClick = btnCalculateClick
+    ExplicitLeft = 105
+    ExplicitTop = 267
+  end
+  object rgroupTipo: TRadioGroup
+    Left = 152
+    Top = 200
+    Width = 185
+    Height = 105
+    Caption = 'Selecione uma op'#231#227'o'
+    Items.Strings = (
+      'Resid'#234'ncia'
+      'Com'#233'rcio'
+      'Ind'#250'stria'
+      'Fazenda')
+    TabOrder = 2
   end
 end

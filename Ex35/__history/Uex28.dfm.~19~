@@ -1,8 +1,9 @@
 object frmEx28: TfrmEx28
   Left = 0
   Top = 0
-  Caption = 'Calcular conta de luz'
-  ClientHeight = 275
+  Align = alLeft
+  Caption = 'Exerc'#237'cio 28'
+  ClientHeight = 339
   ClientWidth = 480
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -10,6 +11,7 @@ object frmEx28: TfrmEx28
   Font.Height = -13
   Font.Name = 'Tahoma'
   Font.Style = []
+  FormStyle = fsMDIChild
   OldCreateOrder = False
   Visible = True
   PixelsPerInch = 96
@@ -47,11 +49,13 @@ object frmEx28: TfrmEx28
     ShowHint = True
     TabOrder = 0
     TextHint = 'Insira o valor de KW/h consumido'
+    ExplicitLeft = 55
+    ExplicitTop = 283
   end
   object btnCalculate: TButton
     AlignWithMargins = True
     Left = 100
-    Top = 247
+    Top = 311
     Width = 280
     Height = 25
     Margins.Left = 100
@@ -61,23 +65,26 @@ object frmEx28: TfrmEx28
     Caption = 'Calcular'
     TabOrder = 1
     OnClick = btnCalculateClick
-    ExplicitTop = 311
+    ExplicitLeft = 105
+    ExplicitTop = 67
   end
   object rgroupTipo: TRadioGroup
     AlignWithMargins = True
     Left = 3
     Top = 127
     Width = 474
-    Height = 97
+    Height = 161
     Align = alClient
     Caption = 'Selecione uma op'#231#227'o'
-    Columns = 2
     Items.Strings = (
       'Resid'#234'ncia'
       'Com'#233'rcio'
       'Ind'#250'stria'
       'Fazenda')
     TabOrder = 2
-    ExplicitHeight = 114
+    ExplicitLeft = 152
+    ExplicitTop = 125
+    ExplicitWidth = 185
+    ExplicitHeight = 105
   end
 end
