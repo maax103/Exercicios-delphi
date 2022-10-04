@@ -1,8 +1,10 @@
 object frmEx28: TfrmEx28
+  AlignWithMargins = True
   Left = 0
   Top = 0
+  Align = alLeft
   Caption = 'Exerc'#237'cio 28'
-  ClientHeight = 260
+  ClientHeight = 339
   ClientWidth = 480
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -24,16 +26,16 @@ object frmEx28: TfrmEx28
     Margins.Top = 20
     Align = alTop
     Alignment = taCenter
-    Caption = 'Aumento salarial'
+    Caption = 'Calcular valor da conta de luz'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -20
     Font.Name = 'Tahoma'
     Font.Style = []
     ParentFont = False
-    ExplicitWidth = 150
+    ExplicitWidth = 263
   end
-  object edtQtdFunc: TEdit
+  object edtConsumo: TEdit
     AlignWithMargins = True
     Left = 60
     Top = 97
@@ -47,23 +49,43 @@ object frmEx28: TfrmEx28
     ParentShowHint = False
     ShowHint = True
     TabOrder = 0
-    TextHint = 'Insira a quantidade de funcion'#225'rios'
+    TextHint = 'Insira o valor de KW/h consumido'
+    ExplicitLeft = 55
+    ExplicitTop = 283
   end
   object btnCalculate: TButton
     AlignWithMargins = True
     Left = 100
-    Top = 144
+    Top = 311
     Width = 280
     Height = 25
     Margins.Left = 100
     Margins.Top = 20
     Margins.Right = 100
-    Align = alTop
+    Align = alBottom
     Caption = 'Calcular'
     TabOrder = 1
     OnClick = btnCalculateClick
-    ExplicitLeft = 176
-    ExplicitTop = 168
-    ExplicitWidth = 99
+    ExplicitLeft = 105
+    ExplicitTop = 67
+  end
+  object rgroupTipo: TRadioGroup
+    AlignWithMargins = True
+    Left = 3
+    Top = 127
+    Width = 474
+    Height = 161
+    Align = alClient
+    Caption = 'Selecione uma op'#231#227'o'
+    Items.Strings = (
+      'Resid'#234'ncia'
+      'Com'#233'rcio'
+      'Ind'#250'stria'
+      'Fazenda')
+    TabOrder = 2
+    ExplicitLeft = 152
+    ExplicitTop = 125
+    ExplicitWidth = 185
+    ExplicitHeight = 105
   end
 end

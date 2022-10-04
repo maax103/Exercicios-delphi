@@ -5,8 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
   System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls,
-  Vcl.ComCtrls, Vcl.ToolWin;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls;
 
 type
   TTipo = (tpResidencia, tpComercio, tpIndustria, tpFazenda);
@@ -18,7 +17,7 @@ type
     rgroupTipo: TRadioGroup;
     procedure btnCalculateClick(Sender: TObject);
   private
-    procedure calcularConsumo(var aKwGasto:Double;var aResultado: Double);
+    procedure calcularConsumo(aKwGasto, aResultado: Double);
     procedure escreverResposta(aKwGasto, aResultado: Double);
     { Private declarations }
   public
@@ -35,7 +34,7 @@ uses
 
 {$R *.dfm}
 
-procedure TfrmEx28.calcularConsumo(var aKwGasto:Double; var aResultado: Double);
+procedure TfrmEx28.calcularConsumo(aKwGasto, aResultado: Double);
 begin
 
   case TTipo(rgroupTipo.ItemIndex) of
@@ -71,15 +70,14 @@ begin
 
   calcularConsumo(xKwGasto, xResultado);
   escreverResposta(xKwGasto, xResultado);
-  frmEx28.Close;
 end;
 
 procedure TfrmEx28.escreverResposta(aKwGasto, aResultado:Double);
 begin
   Exercicios.memResult.Clear;
-  Exercicios.memResult.Lines.Add(Format('Consumo Total: %f' + sLineBreak + 'Valor da conta: %f',
+  Exercicios.memResult.Lines.Add(Format('Tipo de cliente: Residêncial' +
+    sLineBreak + 'Consumo Total: %f' + sLineBreak + 'Valor da conta: %f',
     [aKwGasto, aResultado]));
-
 
 end;
 

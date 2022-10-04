@@ -1,0 +1,86 @@
+unit Uex28;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls;
+
+type
+  TTipo = (tpResidencia, tpComercio, tpIndustria, tpFazenda);
+
+  TfrmEx28 = class(TForm)
+    edtConsumo: TEdit;
+    lbTittle: TLabel;
+    btnCalculate: TButton;
+    rgroupTipo: TRadioGroup;
+    procedure btnCalculateClick(Sender: TObject);
+  private
+    // procedure calcularConsumo;
+    procedure escreverResposta(aResult: Currency; aConsumo: Double);
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmEx28: TfrmEx28;
+
+implementation
+
+uses
+  UFrmExercicios;
+
+{$R *.dfm}
+
+function calcularConsumo(aConsumo: Double): Currency;
+
+begin
+
+end;
+
+end;
+
+procedure TfrmEx28.btnCalculateClick(Sender: TObject);
+var
+  xConsumoKWh: Double;
+  xValorDaConta: Currency;
+begin
+  xConsumoKWh := StrToFloatDef(edtConsumo.Text, 1);
+  xValorDaConta := calcularConsumo(xConsumoKWh);
+  escreverResposta(xValorDaConta, xConsumoKWh);
+end;
+
+procedure TfrmEx28.escreverResposta(aResult: Currency; aConsumo: Double);
+var
+  xKwGasto, xResultado: Double;
+begin
+  case TTipo(rgroupTipo.ItemIndex) of
+    tpResidencia:
+      begin
+        xResultado := xKwGasto * 0.6;
+      end;
+
+    tpComercio:
+      begin
+        xResultado := xKwGasto * 0.48;
+      end;
+
+    tpIndustria:
+      begin
+        xResultado := xKwGasto * 1.29;
+      end;
+
+    tpFazenda:
+      begin
+        xResultado := xKwGasto * 2.18;
+      end;
+    Exercicios.memResult.Clear;
+    Exercicios.memResult.Lines.Add(Format('Tipo de cliente: Residêncial' +
+      sLineBreak + 'Consumo Total: %f' + sLineBreak + 'Valor da conta: %f',
+      [aConsumo, aResult]));
+
+    end;
+
+    end.

@@ -71,7 +71,6 @@ begin
 
   calcularConsumo(xKwGasto, xResultado);
   escreverResposta(xKwGasto, xResultado);
-  frmEx28.Close;
 end;
 
 procedure TfrmEx28.escreverResposta(aKwGasto, aResultado:Double);
@@ -79,7 +78,6 @@ begin
   Exercicios.memResult.Clear;
   Exercicios.memResult.Lines.Add(Format('Consumo Total: %f' + sLineBreak + 'Valor da conta: %f',
     [aKwGasto, aResultado]));
-
 
 end;
 

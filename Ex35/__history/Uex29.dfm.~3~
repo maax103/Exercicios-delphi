@@ -1,9 +1,9 @@
-object frmEx28: TfrmEx28
+object frmEx29: TfrmEx29
   Left = 0
   Top = 0
-  Caption = 'Exerc'#237'cio 28'
-  ClientHeight = 682
-  ClientWidth = 678
+  Caption = 'Exerc'#237'cio 29'
+  ClientHeight = 664
+  ClientWidth = 689
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText

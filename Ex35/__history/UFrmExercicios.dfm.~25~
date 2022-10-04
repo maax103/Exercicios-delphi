@@ -43,12 +43,13 @@ object Exercicios: TExercicios
     Left = 50
     Top = 42
     Width = 400
-    Height = 455
+    Height = 303
     Margins.Left = 50
     Margins.Top = 10
     Margins.Right = 50
     Align = alTop
     TabOrder = 0
+    ExplicitWidth = 579
   end
   object MainMenu1: TMainMenu
     Left = 16
