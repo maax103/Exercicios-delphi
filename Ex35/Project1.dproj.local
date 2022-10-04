@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/09/12 20:47:44.000.693,=C:\Users\mmfurtado\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022/09/20 19:52:09.000.084,=C:\Users\mmfurtado\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022/09/20 19:58:21.000.041,C:\Users\mmfurtado\Documents\Embarcadero\Studio\Projects\Unit2.dfm=C:\Users\mmfurtado\Desktop\Max\Exercícios Lista\Ex01\Unit2.dfm</Transaction>
+    <Transaction>2022/09/20 19:58:21.000.041,C:\Users\mmfurtado\Documents\Embarcadero\Studio\Projects\Unit2.pas=C:\Users\mmfurtado\Desktop\Max\Exercícios Lista\Ex01\Unit2.pas</Transaction>
+    <Transaction>2022/09/20 20:04:42.000.342,C:\Users\mmfurtado\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\mmfurtado\Desktop\Max\Exercícios Lista\Ex01\Project1.dproj</Transaction>
+    <Transaction>2022/09/30 21:06:51.000.060,=C:\Users\mmfurtado\Desktop\Max\Exercícios Lista\Exercicios-delphi\Ex28\Unit1.pas</Transaction>
+    <Transaction>2022/09/30 21:06:59.000.300,=C:\Users\mmfurtado\Desktop\Max\Exercícios Lista\Exercicios-delphi\Ex28\Unit1.pas</Transaction>
+    <Transaction>2022/09/30 21:10:07.000.022,C:\Users\mmfurtado\Desktop\Max\Exercícios Lista\Exercicios-delphi\Ex28\ex28.pas=C:\Users\mmfurtado\Desktop\Max\Exercícios Lista\Exercicios-delphi\Ex28\Unit1.pas</Transaction>
+    <Transaction>2022/09/30 21:10:07.000.022,C:\Users\mmfurtado\Desktop\Max\Exercícios Lista\Exercicios-delphi\Ex28\ex28.dfm=C:\Users\mmfurtado\Desktop\Max\Exercícios Lista\Exercicios-delphi\Ex28\Unit1.dfm</Transaction>
+    <Transaction>2022/09/30 21:11:06.000.809,C:\Users\mmfurtado\Desktop\Max\Exercícios Lista\Exercicios-delphi\Ex28\Uex28.pas=C:\Users\mmfurtado\Desktop\Max\Exercícios Lista\Exercicios-delphi\Ex28\ex28.pas</Transaction>
+    <Transaction>2022/09/30 21:11:06.000.809,C:\Users\mmfurtado\Desktop\Max\Exercícios Lista\Exercicios-delphi\Ex28\Uex28.dfm=C:\Users\mmfurtado\Desktop\Max\Exercícios Lista\Exercicios-delphi\Ex28\ex28.dfm</Transaction>
+    <Transaction>2022/09/30 21:11:39.000.155,C:\Users\mmfurtado\Desktop\Max\Exercícios Lista\Exercicios-delphi\Ex28\UFrmExercicios.dfm=C:\Users\mmfurtado\Desktop\Max\Exercícios Lista\Exercicios-delphi\Ex28\Unit2.dfm</Transaction>
+    <Transaction>2022/09/30 21:11:39.000.155,C:\Users\mmfurtado\Desktop\Max\Exercícios Lista\Exercicios-delphi\Ex28\UFrmExercicios.pas=C:\Users\mmfurtado\Desktop\Max\Exercícios Lista\Exercicios-delphi\Ex28\Unit2.pas</Transaction>
+    <Transaction>2022/09/30 21:12:42.000.392,=C:\Users\mmfurtado\Desktop\Max\Exercícios Lista\Exercicios-delphi\Ex28\Unit1.pas</Transaction>
+    <Transaction>2022/09/30 21:12:59.000.164,C:\Users\mmfurtado\Desktop\Max\Exercícios Lista\Exercicios-delphi\Ex28\Uex29.dfm=C:\Users\mmfurtado\Desktop\Max\Exercícios Lista\Exercicios-delphi\Ex28\Unit1.dfm</Transaction>
+    <Transaction>2022/09/30 21:12:59.000.164,C:\Users\mmfurtado\Desktop\Max\Exercícios Lista\Exercicios-delphi\Ex28\Uex29.pas=C:\Users\mmfurtado\Desktop\Max\Exercícios Lista\Exercicios-delphi\Ex28\Unit1.pas</Transaction>
+    <Transaction>2022/09/30 21:13:50.000.684,=C:\Users\mmfurtado\Desktop\Max\Exercícios Lista\Exercicios-delphi\Ex28\Unit1.pas</Transaction>
+    <Transaction>2022/09/30 21:14:18.000.205,C:\Users\mmfurtado\Desktop\Max\Exercícios Lista\Exercicios-delphi\Ex28\Uex30.pas=C:\Users\mmfurtado\Desktop\Max\Exercícios Lista\Exercicios-delphi\Ex28\Unit1.pas</Transaction>
+    <Transaction>2022/09/30 21:14:18.000.205,C:\Users\mmfurtado\Desktop\Max\Exercícios Lista\Exercicios-delphi\Ex28\Uex30.dfm=C:\Users\mmfurtado\Desktop\Max\Exercícios Lista\Exercicios-delphi\Ex28\Unit1.dfm</Transaction>
+  </Transactions>
+</BorlandProject>
