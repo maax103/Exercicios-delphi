@@ -1,0 +1,78 @@
+object frmEx28: TfrmEx28
+  Left = 0
+  Top = 0
+  Caption = 'Exerc'#237'cio 28'
+  ClientHeight = 617
+  ClientWidth = 480
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -13
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  FormStyle = fsMDIChild
+  OldCreateOrder = False
+  Visible = True
+  PixelsPerInch = 96
+  TextHeight = 16
+  object lbTittle: TLabel
+    AlignWithMargins = True
+    Left = 3
+    Top = 20
+    Width = 474
+    Height = 24
+    Margins.Top = 20
+    Align = alTop
+    Alignment = taCenter
+    Caption = 'Aumento salarial'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -20
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    ExplicitWidth = 150
+  end
+  object edtQtdFunc: TEdit
+    AlignWithMargins = True
+    Left = 60
+    Top = 97
+    Width = 360
+    Height = 24
+    Margins.Left = 60
+    Margins.Top = 50
+    Margins.Right = 60
+    Align = alTop
+    Alignment = taCenter
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 0
+    TextHint = 'Insira a quantidade de funcion'#225'rios'
+  end
+  object btnCalculate: TButton
+    AlignWithMargins = True
+    Left = 100
+    Top = 144
+    Width = 280
+    Height = 25
+    Margins.Left = 100
+    Margins.Top = 20
+    Margins.Right = 100
+    Align = alTop
+    Caption = 'Calcular'
+    TabOrder = 1
+    OnClick = btnCalculateClick
+  end
+  object memResult: TMemo
+    AlignWithMargins = True
+    Left = 50
+    Top = 202
+    Width = 380
+    Height = 367
+    Margins.Left = 50
+    Margins.Top = 30
+    Margins.Right = 50
+    Align = alTop
+    TabOrder = 2
+  end
+end

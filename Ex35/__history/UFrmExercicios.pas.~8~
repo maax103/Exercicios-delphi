@@ -1,0 +1,50 @@
+unit UFrmExercicios;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.Menus;
+
+type
+  TExercicios = class(TForm)
+    MainMenu1: TMainMenu;
+    Exerccio281: TMenuItem;
+    Exerccio282: TMenuItem;
+    Exerccio301: TMenuItem;
+    Sair1: TMenuItem;
+    procedure Exerccio281Click(Sender: TObject);
+    procedure Sair1Click(Sender: TObject);
+  private
+
+  public
+    { Public declarations }
+  end;
+
+var
+  Exercicios: TExercicios;
+
+implementation
+
+uses
+  Uex28;
+
+{$R *.dfm}
+
+
+procedure TExercicios.Exerccio281Click(Sender: TObject);
+begin
+  if frmEx28 = nil then
+    frmEx28 := TfrmEx28.Create(Self);
+
+  frmEx28.Show;
+
+end;
+
+procedure TExercicios.Sair1Click(Sender: TObject);
+begin
+  Exercicios.Close;
+end;
+
+end.
